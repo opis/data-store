@@ -17,7 +17,7 @@
 
 namespace Opis\DataStore\Drivers;
 
-class Serialized extends AbstractFile
+class File extends AbstractFile
 {
     /**
      * @inheritDoc
