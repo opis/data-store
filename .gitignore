@@ -1,0 +1,6 @@
+vendor/
+.idea/
+_site/
+shared/
+Gemfile.lock
+composer.lock
