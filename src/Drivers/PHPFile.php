@@ -26,6 +26,14 @@ class PHPFile extends AbstractFile
     {
         parent::__construct($path, $prefix, $extension);
     }
+    
+    /**
+     * @inheritDoc
+     */
+    protected function readData(string $file): string
+    {
+        return $file;
+    }
 
     /**
      * @inheritDoc
