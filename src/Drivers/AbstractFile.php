@@ -152,7 +152,7 @@ abstract class AbstractFile implements IDataStore
             return false;
         }
 
-        return $this->writeData($file, $store->data());
+        return $this->writeData($file, $this->export($store->data()));
     }
 
     /**
