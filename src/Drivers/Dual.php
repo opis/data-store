@@ -1,6 +1,6 @@
 <?php
 /* ============================================================================
- * Copyright © 2018 Opis
+ * Copyright 2018 Zindex Software
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -46,7 +46,7 @@ class Dual implements IDataStore
         $this->secondary = $secondary;
         $this->autoSync = $auto_sync;
     }
-    
+
     /**
      * @inheritDoc
      */

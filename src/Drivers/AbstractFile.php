@@ -1,6 +1,6 @@
 <?php
 /* ============================================================================
- * Copyright © 2018 Opis
+ * Copyright 2018 Zindex Software
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -141,7 +141,7 @@ abstract class AbstractFile implements IDataStore
                 return false;
             }
             if (count($path) === 1) {
-                return (bool) @unlink($file);
+                return (bool)@unlink($file);
             }
             $this->cache[$key] = new Memory($this->import($this->readData($file)));
         }
@@ -191,8 +191,7 @@ abstract class AbstractFile implements IDataStore
 
         if ($chmod) {
             chmod($file, 0774);
-        }
-        elseif (!ftruncate($fh, 0)) {
+        } elseif (!ftruncate($fh, 0)) {
             return false;
         }
 

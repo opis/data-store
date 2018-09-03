@@ -1,6 +1,6 @@
 <?php
 /* ============================================================================
- * Copyright © 2018 Opis
+ * Copyright 2018 Zindex Software
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,8 +33,12 @@ class JSONFile extends AbstractFile
      * @param bool $decode_assoc
      * @param int $encode_options
      */
-    public function __construct(string $path, string $prefix = '', bool $decode_assoc = false, int $encode_options = self::DEFAULT_ENCODE_OPTIONS)
-    {
+    public function __construct(
+        string $path,
+        string $prefix = '',
+        bool $decode_assoc = false,
+        int $encode_options = self::DEFAULT_ENCODE_OPTIONS
+    ) {
         $this->encodeOptions = $encode_options;
         $this->decodeAsArray = $decode_assoc;
         parent::__construct($path, $prefix, 'json');

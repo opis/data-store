@@ -1,6 +1,6 @@
 <?php
 /* ============================================================================
- * Copyright © 2018 Opis
+ * Copyright 2018 Zindex Software
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -91,8 +91,7 @@ class Memory implements IDataStore
                 }
                 $data = &$data->{$key};
                 continue;
-            }
-            elseif (is_array($data)) {
+            } elseif (is_array($data)) {
                 if (!array_key_exists($key, $data)) {
                     $data[$key] = [];
                 }
@@ -106,8 +105,7 @@ class Memory implements IDataStore
         if (is_object($data)) {
             $data->{$last} = $value;
             return true;
-        }
-        elseif (is_array($data)) {
+        } elseif (is_array($data)) {
             $data[$last] = $value;
             return true;
         }
@@ -136,8 +134,7 @@ class Memory implements IDataStore
                 }
                 $data = &$data->{$key};
                 continue;
-            }
-            elseif (is_array($data)) {
+            } elseif (is_array($data)) {
                 if (!array_key_exists($key, $data)) {
                     return false;
                 }
@@ -154,8 +151,7 @@ class Memory implements IDataStore
             }
             unset($data->{$last});
             return true;
-        }
-        elseif (is_array($data)) {
+        } elseif (is_array($data)) {
             if (!array_key_exists($last, $data)) {
                 return false;
             }
