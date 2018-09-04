@@ -9,20 +9,36 @@ of data.
 
 ### Documentation
 
-Examples and documentation can be found [here](https://www.opis.io/data-store).
+The full documentation for this library can be found [here][documentation].
 
 ### License
 
-**Opis Data Store** is licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0). 
+**Opis Data Store** is licensed under the [Apache License, Version 2.0][apache_license].
 
 ### Requirements
 
-* PHP 7.0.* or higher
+* PHP ^7.0
 
-### Installation
+## Installation
 
-This library is available on [Packagist](https://packagist.org/packages/opis/data-store) and can be installed using [Composer](http://getcomposer.org).
+**Opis Data Store** is available on [Packagist] and it can be installed from a 
+command line interface by using [Composer]. 
 
 ```bash
 composer require opis/data-store
 ```
+
+Or you could directly reference it into your `composer.json` file as a dependency
+
+```json
+{
+    "require": {
+        "opis/data-store": "^1.0"
+    }
+}
+```
+
+[documentation]: https://opis.io/data-store
+[apache_license]: https://www.apache.org/licenses/LICENSE-2.0 "Apache License"
+[Packagist]: https://packagist.org/packages/opis/data-store "Packagist"
+[Composer]: https://getcomposer.org "Composer"

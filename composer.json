@@ -2,7 +2,7 @@
     "name": "opis/data-store",
     "description": "Opis Data Store is a library for storing and fetching structured collections of data.",
     "keywords": ["opis", "data-store", "data", "config"],
-    "homepage": "http://opis.io",
+    "homepage": "https://opis.io/data-store",
     "license": "Apache-2.0",
     "authors": [
         {
