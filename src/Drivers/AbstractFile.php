@@ -81,7 +81,7 @@ abstract class AbstractFile implements IDataStore
         if (!isset($this->cache[$key])) {
             $file = $this->filePath($key);
 
-            if (!file_exists($file)) {
+            if (!is_file($file)) {
                 return $default;
             }
 
@@ -106,7 +106,7 @@ abstract class AbstractFile implements IDataStore
         $file = $this->filePath($key);
 
         if (!isset($this->cache[$key])) {
-            if (file_exists($file)) {
+            if (is_file($file)) {
                 $this->cache[$key] = new Memory($this->import($this->readData($file)));
             } else {
                 $this->cache[$key] = new Memory();
@@ -137,7 +137,7 @@ abstract class AbstractFile implements IDataStore
         $file = $this->filePath($key);
 
         if (!isset($this->cache[$key])) {
-            if (!file_exists($file)) {
+            if (!is_file($file)) {
                 return false;
             }
             if (count($path) === 1) {
@@ -179,7 +179,7 @@ abstract class AbstractFile implements IDataStore
      */
     protected function writeData(string $file, string $data): bool
     {
-        $chmod = !file_exists($file);
+        $chmod = !is_file($file);
         $fh = fopen($file, 'c');
         if ($fh === false) {
             return false;
