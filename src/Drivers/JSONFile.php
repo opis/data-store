@@ -25,7 +25,7 @@ class JSONFile extends AbstractFile
     protected $encodeOptions = 0;
 
     /** @var bool */
-    protected $decodeAsArray = true;
+    protected $decodeAsArray = false;
 
     /**
      * @param string $path
@@ -36,7 +36,7 @@ class JSONFile extends AbstractFile
     public function __construct(
         string $path,
         string $prefix = '',
-        bool $decode_assoc = true,
+        bool $decode_assoc = false,
         int $encode_options = self::DEFAULT_ENCODE_OPTIONS
     ) {
         $this->encodeOptions = $encode_options;
