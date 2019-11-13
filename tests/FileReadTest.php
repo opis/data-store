@@ -41,7 +41,7 @@ class FileReadTest extends TestCase
         $this->assertEquals('BAZ', $this->store->read(['test', 'foo', 'bar.baz']));
     }
 
-    public function xtestReadWithDot()
+    public function testReadWithDot()
     {
         $this->assertEquals(null, $this->store->read('test.other.foo.bar'));
         $this->assertEquals('BAZ', $this->store->read(['test.other', 'foo', 'bar.baz']));
