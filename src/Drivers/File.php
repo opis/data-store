@@ -17,7 +17,7 @@
 
 namespace Opis\DataStore\Drivers;
 
-class File extends AbstractFile
+class File extends BaseFileDriver
 {
     /**
      * @inheritDoc

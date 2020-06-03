@@ -17,7 +17,7 @@
 
 namespace Opis\DataStore\Drivers;
 
-class PHPFile extends AbstractFile
+class PHPFile extends BaseFileDriver
 {
     /**
      * @inheritDoc

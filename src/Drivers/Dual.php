@@ -18,17 +18,17 @@
 namespace Opis\DataStore\Drivers;
 
 use Opis\DataStore\{
-    IDataStore, PathTrait
+    DataStore, Traits\Path
 };
 
-class Dual implements IDataStore
+class Dual implements DataStore
 {
-    use PathTrait;
+    use Path;
 
-    /** @var IDataStore Primary storage */
+    /** @var DataStore Primary storage */
     protected $primary;
 
-    /** @var IDataStore Secondary storage */
+    /** @var DataStore Secondary storage */
     protected $secondary;
 
     /** @var bool Auto-sync storages */
@@ -36,11 +36,11 @@ class Dual implements IDataStore
 
     /**
      * DualConfig constructor.
-     * @param IDataStore $primary
-     * @param IDataStore $secondary
+     * @param DataStore $primary
+     * @param DataStore $secondary
      * @param bool $auto_sync
      */
-    public function __construct(IDataStore $primary, IDataStore $secondary, bool $auto_sync = true)
+    public function __construct(DataStore $primary, DataStore $secondary, bool $auto_sync = true)
     {
         $this->primary = $primary;
         $this->secondary = $secondary;

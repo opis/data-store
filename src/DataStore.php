@@ -17,7 +17,7 @@
 
 namespace Opis\DataStore;
 
-interface IDataStore
+interface DataStore
 {
     /**
      * @param string|string[] $path

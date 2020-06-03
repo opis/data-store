@@ -17,16 +17,15 @@
 
 namespace Opis\DataStore\Test;
 
+use Opis\DataStore\DataStore;
 use Opis\DataStore\Drivers\Memory;
-use Opis\DataStore\IDataStore;
 use PHPUnit\Framework\TestCase;
 
 class MemoryTest extends TestCase
 {
-    /** @var IDataStore */
-    protected $store;
+    private DataStore $store;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->store = new Memory([
             'foo' => [

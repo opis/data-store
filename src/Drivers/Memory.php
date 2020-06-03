@@ -18,12 +18,12 @@
 namespace Opis\DataStore\Drivers;
 
 use Opis\DataStore\{
-    IDataStore, PathTrait
+    DataStore, Traits\Path
 };
 
-class Memory implements IDataStore
+class Memory implements DataStore
 {
-    use PathTrait;
+    use Path;
 
     /** @var mixed */
     protected $data;

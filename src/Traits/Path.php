@@ -15,9 +15,9 @@
  * limitations under the License.
  * ============================================================================ */
 
-namespace Opis\DataStore;
+namespace Opis\DataStore\Traits;
 
-trait PathTrait
+trait Path
 {
     /**
      * @param string|string[] $path

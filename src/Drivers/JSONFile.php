@@ -17,7 +17,7 @@
 
 namespace Opis\DataStore\Drivers;
 
-class JSONFile extends AbstractFile
+class JSONFile extends BaseFileDriver
 {
     const DEFAULT_ENCODE_OPTIONS = JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES;
 

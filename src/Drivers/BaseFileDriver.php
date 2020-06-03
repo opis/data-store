@@ -19,24 +19,19 @@ namespace Opis\DataStore\Drivers;
 
 use RuntimeException;
 use Opis\DataStore\{
-    IDataStore, PathTrait
+    DataStore, Traits\Path
 };
 
-abstract class AbstractFile implements IDataStore
+abstract class BaseFileDriver implements DataStore
 {
-    use PathTrait;
+    use Path;
 
-    /** @var string */
-    protected $path;
-
-    /** @var string */
-    protected $prefix;
-
-    /** @var string */
-    protected $extension;
+    protected string $path;
+    protected string $prefix;
+    protected string $extension;
 
     /** @var Memory[] */
-    protected $cache = [];
+    protected array $cache = [];
 
     /**
      * @param string $path

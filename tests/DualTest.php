@@ -19,24 +19,19 @@ namespace Opis\DataStore\Test;
 
 use Opis\DataStore\Drivers\Dual;
 use Opis\DataStore\Drivers\Memory;
-use Opis\DataStore\IDataStore;
+use Opis\DataStore\DataStore;
 use PHPUnit\Framework\TestCase;
 
 class DualTest extends TestCase
 {
-    /** @var IDataStore */
-    protected $store;
-
-    /** @var IDataStore */
-    protected $primary;
-
-    /** @var IDataStore */
-    protected $secondary;
+    private DataStore $store;
+    private DataStore $primary;
+    private DataStore $secondary;
 
     /**
      * @inheritDoc
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->primary = new Memory([
             'foo' => [

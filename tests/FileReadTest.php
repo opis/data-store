@@ -17,19 +17,18 @@
 
 namespace Opis\DataStore\Test;
 
+use Opis\DataStore\DataStore;
 use Opis\DataStore\Drivers\JSONFile;
-use Opis\DataStore\IDataStore;
 use PHPUnit\Framework\TestCase;
 
 class FileReadTest extends TestCase
 {
-    /** @var IDataStore */
-    protected $store;
+    private DataStore $store;
 
     /**
      * @inheritDoc
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->store = new JSONFile(__DIR__ . DIRECTORY_SEPARATOR . 'data', '', true);
     }
