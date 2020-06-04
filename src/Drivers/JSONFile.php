@@ -1,6 +1,6 @@
 <?php
 /* ============================================================================
- * Copyright 2018 Zindex Software
+ * Copyright 2018-2020 Zindex Software
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,11 +21,8 @@ class JSONFile extends BaseFileDriver
 {
     const DEFAULT_ENCODE_OPTIONS = JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES;
 
-    /** @var int */
-    protected $encodeOptions = 0;
-
-    /** @var bool */
-    protected $decodeAsArray = false;
+    protected int $encodeOptions = 0;
+    protected bool $decodeAsArray = false;
 
     /**
      * @param string $path

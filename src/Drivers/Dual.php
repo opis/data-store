@@ -1,6 +1,6 @@
 <?php
 /* ============================================================================
- * Copyright 2018 Zindex Software
+ * Copyright 2018-2020 Zindex Software
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,14 +25,9 @@ class Dual implements DataStore
 {
     use Path;
 
-    /** @var DataStore Primary storage */
-    protected $primary;
-
-    /** @var DataStore Secondary storage */
-    protected $secondary;
-
-    /** @var bool Auto-sync storages */
-    protected $autoSync;
+    protected DataStore $primary;
+    protected DataStore $secondary;
+    protected bool $autoSync;
 
     /**
      * DualConfig constructor.
