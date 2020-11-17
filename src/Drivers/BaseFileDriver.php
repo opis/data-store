@@ -201,7 +201,7 @@ abstract class BaseFileDriver implements DataStore
      * @param string $key
      * @return string
      */
-    protected function filePath($key): string
+    protected function filePath(string $key): string
     {
         return $this->path . '/' . $this->prefix . $key . $this->extension;
     }
